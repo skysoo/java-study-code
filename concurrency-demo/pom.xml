@@ -32,7 +32,6 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>${lombok.v}</version>
-      <scope>provided</scope>
     </dependency>
 
   </dependencies>
