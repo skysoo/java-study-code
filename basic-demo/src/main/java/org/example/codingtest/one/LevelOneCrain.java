@@ -1,7 +1,12 @@
-package org.example.codingtest;
+package org.example.codingtest.one;
 
 import java.util.Stack;
 
+/**
+ * 인형이 담긴 2차원 배열 board와 인형을 집기 위해 크레인을 작동시킨 위치가 담긴 배열 moves가 매개변수로 주어질 때, 집어 올린 인형은 바구니에 쌓이게 되고 인형은 순서대로 쌓이게 됩니다.
+ * 이 때, 바구니에 똑같은 인형이 연속해서 담기면 똑같은 인형 두개는 터트려져 사라집니다.
+ * 그럼 크레인을 모두 작동시킨 후 터트려져 사라진 인형의 개수를 return 하도록 solution 함수를 완성해주세요.
+ **/
 public class LevelOneCrain {
     public static void main(String[] args) {
 
@@ -37,6 +42,7 @@ public class LevelOneCrain {
             }
         }
         answer = answer * 2;
+        System.out.println(answer);
         return answer;
     }
 }
