@@ -1,4 +1,4 @@
-package org.example.codingtest.one;
+package org.example.codingtest.oneLevel;
 
 /**
  * 자연수 n이 매개변수로 주어집니다. n을 3진법 상에서 앞뒤로 뒤집은 후,
@@ -63,15 +63,11 @@ public class TernaryFlip {
         builder.reverse();
         System.out.println("reverse : "+builder.toString());
 
-        int a = builder.length()-1;
         int sum = 0;
 
-        // 10진수 변환
-        for (int i=0;i< builder.length();i++){
-            int before = Integer.parseInt(builder.substring(i, i + 1));
-
-            sum += before * Math.pow(3,a);
-            a--;
+        for(int i=builder.length()-1;i>=0;i--){
+            int before = Integer.parseInt(builder.substring(i, i+1));
+            sum += before * Math.pow(3,(builder.length()-1)-i);
         }
 
         System.out.println("10진수 : "+sum);

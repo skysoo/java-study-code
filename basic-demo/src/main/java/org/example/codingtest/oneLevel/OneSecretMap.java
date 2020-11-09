@@ -1,4 +1,4 @@
-package org.example.codingtest.one;
+package org.example.codingtest.oneLevel;
 
 
 import java.util.ArrayList;

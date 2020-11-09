@@ -1,7 +1,7 @@
 # 1. basic-demo 프로젝트 
 Java의 기본 스펙 테스트 및 오픈 소스 툴 기능 테스트
 
-* [코딩 테스트 관련 패키지 ](https://github.com/skysoo/java-study-code/tree/main/basic-demo/src/main/java/org/example/codingtest)
+* [알고리즘 테스트 코드 관련 패키지 ](https://github.com/skysoo/java-study-code/tree/main/basic-demo/src/main/java/org/example/codingtest/)
 * [오픈소스 툴 테스트 관련 패키지](https://github.com/skysoo/java-study-code/tree/main/basic-demo/src/main/java/org/example/opnesource)
 * [테스트에 사용되는 각종 유틸리티 패키지](https://github.com/skysoo/java-study-code/tree/main/basic-demo/src/main/java/org/example/utility)
 * [테스트시 사용되는 VO 클래스 패키지](https://github.com/skysoo/java-study-code/tree/main/basic-demo/src/main/java/org/example/vo)
@@ -17,6 +17,7 @@ Java의 버전별 Concurrency 관련 지원 기능 테스트
 4. Starvation
 5. Deadlock
 6. Immutable
+7. latch
 
 ## 2-2. High Level Concurrency
 1. Future

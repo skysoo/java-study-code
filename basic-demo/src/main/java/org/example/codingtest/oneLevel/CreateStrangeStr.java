@@ -1,4 +1,4 @@
-package org.example.codingtest.one;
+package org.example.codingtest.oneLevel;
 
 /**
  * 문자열 s는 한 개 이상의 단어로 구성되어 있습니다.
