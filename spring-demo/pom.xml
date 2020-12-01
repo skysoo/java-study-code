@@ -45,7 +45,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<!--        Intellij 는 default로 /src/main/java를 Sources Root 경로로 사용한다.-->
