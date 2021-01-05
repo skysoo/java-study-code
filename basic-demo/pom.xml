@@ -67,11 +67,6 @@
             <version>1.26</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.epozen</groupId>
-            <artifactId>arcUtility</artifactId>
-            <version>2.6.3</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
         <dependency>
