@@ -1,4 +1,4 @@
-package org.example.utility;
+package com.example.springdemo.utility.concurrency;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -1,7 +1,5 @@
-package org.example.utility;
+package com.example.springdemo.utility;
 
-import org.example.utility.common.DateUtil;
-import org.example.utility.common.FileUtil;
 import org.example.utility.concurrency.ScheduleUtil;
 import org.example.utility.concurrency.SingleUtil;
 import org.example.utility.exception.LambdaExceptionUtil;
@@ -15,11 +13,8 @@ import java.util.regex.Pattern;
  **/
 public class UT {
     public static final LambdaExceptionUtil exceptionHandler = LambdaExceptionUtil.get();
-    public static final DateUtil dateUtils = DateUtil.get();
-    public static final FileUtil fileUtils = FileUtil.get();
     public static final ScheduleUtil schedule = ScheduleUtil.get();
     public static final SingleUtil single = SingleUtil.get();
-
     public static final Pattern decimalPattern = Pattern.compile("^[-]?[0-9.]+");
     public static final Pattern datePattern = Pattern.compile("(^[0-9]{8})");
     public static final Pattern timePattern = Pattern.compile("(^[0-9]{6})");
@@ -28,6 +23,7 @@ public class UT {
     public static final Pattern dataTypePattern = Pattern.compile("^([A-Z]{9})");
     public static final Pattern dataKndPattern = Pattern.compile("([a-zA-Z])*(_([a-zA-Z]*))+");
     public static final Pattern ipAddrPattern = Pattern.compile("([0-9]){1,3}[.]([0-9]){1,3}[.]([0-9]){1,3}[.]([0-9]{1,3})");
+
     /* 더미로 올라오는 댐 이미지에 대한 정규표현식 */
     public static final Pattern imageFilePattern = Pattern.compile("^[a-zA-Z0-9_-]*.(jpg|png|jpeg|bmp|dxf|pdf)$");
     /* 댐 고유 번호 (7자리 숫자 고정) */

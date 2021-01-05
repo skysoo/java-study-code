@@ -1,4 +1,4 @@
-package org.example.utility;
+package org.example.utility.concurrency;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
