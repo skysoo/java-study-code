@@ -4,11 +4,16 @@ public class Test3 {
     private static final Test3 o = new Test3();
     public static void main(String[] args) {
         int[] value = {10, 1, 10, 1, 1, 4, 3, 10};
-        int k =6;
+        int k =3;
         int solution = o.solution(value, k);
         System.out.println(solution);
     }
 
+    /**
+     * 1. for 문을 돌리면서 k 만큼 자르고 각 sum 을 구한다.
+     * 2. sum 은 answer 에 담는다.
+     * 3. 각 구간마다 sum 을 answer 과 비교 후 최대 값을 저장한다.
+     **/
     public int solution(int[] estimates, int k) {
         int answer = 0;
 

@@ -17,7 +17,7 @@ public class Test1 {
         for (int i = 0; i < location.length; i++) {
             int px = location[i][0];
             int py = location[i][1];
-            if (valid(px,py,s,e)){
+            if (isValid(px,py,s,e)){
                 answer++;
             }
         }
@@ -25,7 +25,7 @@ public class Test1 {
         return answer;
     }
 
-    boolean valid(int px, int py,int[] s, int[] e){
+    boolean isValid(int px, int py, int[] s, int[] e){
         int sx = Math.min(s[0],e[0]);
         int sy = Math.min(s[1],e[1]);
         int ex = Math.max(s[0],e[0]);

@@ -34,11 +34,5 @@ public class Travle {
             }
         }
 
-
     }
-
-
-
-
-
 }
