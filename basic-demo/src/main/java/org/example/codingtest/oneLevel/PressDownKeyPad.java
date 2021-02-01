@@ -24,13 +24,13 @@ public class PressDownKeyPad {
     }
 
     public static String solution(int[] numbers, String hand) {
-        var answer = "";
+        String answer = "";
         // 목표값과 왼손, 오른손의 거리 계산, 거리가 같으면 hand 따라
-        var leftHand = -1;
-        var rightHand = -1;
-        var sb = new StringBuilder();
+        int leftHand = -1;
+        int rightHand = -1;
+        StringBuilder sb = new StringBuilder();
 
-        for (var target : numbers) {
+        for (int target : numbers) {
             System.out.println("target : "+target);
             if (target == 1 || target == 4 || target == 7) {
                 sb.append("L");

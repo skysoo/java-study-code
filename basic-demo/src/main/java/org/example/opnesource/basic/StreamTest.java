@@ -1,4 +1,4 @@
-package org.example.codingtest.basic;
+package org.example.opnesource.basic;
 
 import java.util.Arrays;
 import java.util.HashSet;
