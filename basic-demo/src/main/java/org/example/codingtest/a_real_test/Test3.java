@@ -10,6 +10,20 @@ public class Test3 {
     }
 
     /**
+     *
+     * 점화식 : dp[n] = max(0, dp[n-1]) + arr[n]
+     *
+     **/
+    public int solutionByEnhanced(int[] estimates, int k){
+        int answer = 0;
+        int sum = 0;
+
+
+
+        return answer;
+    }
+
+    /**
      * 1. for 문을 돌리면서 k 만큼 자르고 각 sum 을 구한다.
      * 2. sum 은 answer 에 담는다.
      * 3. 각 구간마다 sum 을 answer 과 비교 후 최대 값을 저장한다.
@@ -27,4 +41,5 @@ public class Test3 {
 
         return answer;
     }
+
 }

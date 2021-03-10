@@ -1,8 +1,10 @@
 package com.example.springdemo.utility;
 
-import org.example.utility.concurrency.ScheduleUtil;
-import org.example.utility.concurrency.SingleUtil;
-import org.example.utility.exception.LambdaExceptionUtil;
+
+import com.example.springdemo.utility.concurrency.ScheduleUtil;
+import com.example.springdemo.utility.concurrency.SingleUtil;
+import com.example.springdemo.utility.exception.LambdaExceptionUtil;
+import com.google.gson.Gson;
 
 import java.util.regex.Pattern;
 
@@ -12,6 +14,7 @@ import java.util.regex.Pattern;
  * @since 2020-05-06 오후 4:32
  **/
 public class UT {
+    public static final Gson gson = new Gson();
     public static final LambdaExceptionUtil exceptionHandler = LambdaExceptionUtil.get();
     public static final ScheduleUtil schedule = ScheduleUtil.get();
     public static final SingleUtil single = SingleUtil.get();
@@ -29,6 +32,7 @@ public class UT {
     /* 댐 고유 번호 (7자리 숫자 고정) */
     public static final Pattern damUniqueNumPattern = Pattern.compile("^[0-9]{7}$");
     public static final Pattern extensionPattern = Pattern.compile("^(([a-zA-Z0-9]+)([_]*)([a-zA-Z0-9]+)(.png|.jpg|.dxf|.PNG|.JPG|.DXF))");
+
 
     public UT() {
     }

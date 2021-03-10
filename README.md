@@ -52,4 +52,55 @@ Java 8부터 지원된 기능으로 Java 5에서 나왔던 Future 의 제한 사
 > CompletableFuture 는 위의 Future 가 가지는 제한 사항들을 모두 수행할 수 있다. 
 
 # 3. spring-demo 프로젝트
-Spring 관련 기능 테스트
+
+> SPRING JPA, CACHE 등 스프링에서 사용되는 여러 기술들을 테스트해보는 프로젝트
+
+## 3-1. Spring Cache With Caffeine
+
+* Caffeine 캐시를 사용해야 하는 이유
+1. 크기 기반 삭제 (빈도 및 최근 사용도에 따라 최대값을 초과하는 경우)
+2. 시간 기반 항목 만료, 마지막 액세스 또는 마지막 쓰기 이후 측정
+3. 항목에 대한 첫번째 요청이 Missing 되었다면 비동기식으로 새로 요청
+4. 제거된 항목에 대한 알림
+5. 캐시 액세스에 대한 통계 축적
+
+```java
+// Cache 속성을 ENUM 클래스로 관리하여 데이터에 대한 일관성 및 가독성을 높인다.
+// 또한 캐시별로 설정값을 다르게 가져갈 수 있다.
+public enum CacheType {
+    USERS("users",5*60, 10000),
+    USER_INFO("userInfo",24*60*60, 10000);
+
+    CacheType(String cachename, int expiredAfterWrite, int maximumSize) {
+        this.cachename = cachename;
+        this.expiredAfterWrite = expiredAfterWrite;
+        this.maximumSize = maximumSize;
+    }
+
+    private String cachename; // 캐시명
+    private int expiredAfterWrite; // 캐시 갱신 타임 
+    private int maximumSize; // 캐시 크기
+}
+```
+
+```java
+@Configuration
+@EnableCaching
+public class CacheConfig {
+    @Bean
+    public CacheManager cacheManager() {
+        SimpleCacheManager cacheManager = new SimpleCacheManager();
+         List<CaffeineCache> caches = Arrays.stream(CacheType.values())
+                 .map(cache -> new CaffeineCache(cache.getCachename(), Caffeine.newBuilder().recordStats()
+                         .expireAfterWrite(cache.getExpiredAfterWrite(), TimeUnit.SECONDS)
+                         .maximumSize(cache.getMaximumSize())
+                         .build()))
+                 .collect(Collectors.toList());
+
+         cacheManager.setCaches(caches);
+        return cacheManager;
+    }
+}
+```
+
+[참고 사이트](https://medium.com/programming-sharing/spring-boot-and-caffeine-cache-integration-9913da699f8c)
