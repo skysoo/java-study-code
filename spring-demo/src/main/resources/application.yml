@@ -15,9 +15,9 @@ spring:
     # 개선 커넥션 풀 db사용
     hikari:
       driver-class-name: org.postgresql.Driver
-      jdbc-url: jdbc:postgresql://192.168.10.7:5432/postgres
-      username: postgres
-      password: postgres
+      jdbc-url: ${url}
+      username: ${user}
+      password: ${password}
   # SPRING JPA Config
   jpa:
     hibernate:
